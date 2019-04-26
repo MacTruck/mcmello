@@ -12,7 +12,7 @@ app.listen(5000, function () {
 
 app.get('/', function(req, res) {
 	console.log("where are you?");
-	res.send('Hello there');
+	res.render('index');
 	// res.render('index');
 });
 
