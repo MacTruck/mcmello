@@ -11,9 +11,11 @@ app.listen(5000, function () {
 });
 
 app.get('/', function(req, res) {
-	console.log("where are you?");
 	res.render('index');
-	// res.render('index');
+});
+
+app.get('/index', function(req, res) {
+	res.render('index');
 });
 
 app.get('/art', function(req, res) {
@@ -32,5 +34,3 @@ app.post('/inquire', jsonParser, function(req, res) {
 	console.log(req.body);
 	res.render('inquire-success', {data: req.body});
 });
-
-console.log("Supposedly running...");
