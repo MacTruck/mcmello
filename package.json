@@ -1,0 +1,31 @@
+{
+  "name": "macinations",
+  "version": "1.0.0",
+  "description": "Professional Website",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "imagemin": "^6.1.0",
+    "imagemin-webp": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MacTruck/mcmello.git"
+  },
+  "keywords": [
+    "art",
+    "design"
+  ],
+  "author": "Scott McInnis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MacTruck/mcmello/issues"
+  },
+  "homepage": "https://github.com/MacTruck/mcmello#readme"
+}

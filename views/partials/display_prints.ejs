@@ -1,0 +1,19 @@
+<section class="prints">
+	<h2>Fresh Squeezed</h2>
+	<h4>— Prints &amp; Illustrations —</h4>
+
+	<% prints.forEach(print => { %>
+		<div class="printContainer" id="<%= print.id %>" style="margin-top: 50px;">		
+			<div class="print"><img class="shadowed <%= print.shape %>" src="images/prints/<%= print.image %>"></div>
+			<div class="printDesc">
+				<h2><%= print.title %></h2>
+				<em><%= print.info %></em>
+				<p><%= print.desc %></p>
+				<a href="#inquiry"><div class="inquireCircle">i</div></a><div class="date"><%= print.date %></div>
+			</div>
+		</div>
+	<% }); %>
+</section>
+
+
+<!-- print. id title image shape info desc date -->
