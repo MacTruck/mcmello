@@ -118,7 +118,7 @@ nav ul li a:hover {
 	float: right;
 }
 .currentPage {
-	background-image: url("images/dots.svg");
+	background-image: url("assets/images/dots.svg");
 	background-repeat: no-repeat;
 	background-position: top center;
 	padding-bottom: 5px;
@@ -320,120 +320,120 @@ button:focus {
 	color: white;
 }
 #occulumProject .hero {
-	background-image: url('images/occulum.webp');
+	background-image: url('assets/images/occulum.webp');
 	background-position-x: 68%;
 	background-position-y: 18%;
 }
 #occulumProject .image1 {
-	background-image: url("images/occulum_wood.webp");
+	background-image: url("assets/images/occulum_wood.webp");
 	background-position-y: -40px;
 	height: 550px;
 }
 #occulumProject .image2 {
-	background-image: url("images/occulum_bottle_mock.webp");
+	background-image: url("assets/images/occulum_bottle_mock.webp");
 	height: 800px;
 	position: relative;
 }
 #occulumProject #slide1 {
-	background-image: url("images/occulum_sketches.webp");
+	background-image: url("assets/images/occulum_sketches.webp");
 }
 #occulumProject #slide2 {
-	background-image: url("images/occulum_sketches_2.webp");
+	background-image: url("assets/images/occulum_sketches_2.webp");
 }
 #occulumProject #slide3 {
-	background-image: url("images/occulum_sketches_3.webp");
+	background-image: url("assets/images/occulum_sketches_3.webp");
 }
 #occulumProject #slide4 {
-	background-image: url("images/occulum_sketches_4.webp");
+	background-image: url("assets/images/occulum_sketches_4.webp");
 }
 #griffithProject .hero {
-	background-image: url('images/griffith.webp');
+	background-image: url('assets/images/griffith.webp');
 	background-position-y: 85%;
 }
 #griffithProject .image1 {
-	background-image: url("images/griffith_main.webp");
+	background-image: url("assets/images/griffith_main.webp");
 	height: 650px;
 }
 #griffithProject .image2 {
-	background-image: url("images/griffith_overview.webp");
+	background-image: url("assets/images/griffith_overview.webp");
 	height: 444px;
 }
 #frequencyProject .hero {
-	background-image: url('images/frequency.webp'); 
+	background-image: url('assets/images/frequency.webp'); 
 	background-position-y: 75%;
 }
 #frequencyProject .image1 {
-	background-image: url('images/frequency_artist_1.webp'); 
+	background-image: url('assets/images/frequency_artist_1.webp'); 
 	height: 530px;
 }
 #frequencyProject .image2 {
-	background-image: url('images/frequency_label-dark.jpg'); 
+	background-image: url('assets/images/frequency_label-dark.jpg'); 
 	height: 540px;
 }
 #frequencyProject .image3 {
-	background-image: url('images/frequency_tastingNotes_1.webp'); 
+	background-image: url('assets/images/frequency_tastingNotes_1.webp'); 
 	height: 475px;
 }
 #frequencyProject .image4 {
-	background-image: url('images/frequency_website_1.webp'); 
+	background-image: url('assets/images/frequency_website_1.webp'); 
 	height: 1110px;
 	background-position: top;
 }
 #hpProject .hero {
-	background-image: url('images/hp.webp');
+	background-image: url('assets/images/hp.webp');
 	background-position-y: 25%;
 }
 #hpProject .slideBox {
 	height: 300px;
 }
 #hpSlide1 {
-	background-image: url("images/hp_banner_1.webp");
+	background-image: url("assets/images/hp_banner_1.webp");
 }
 #hpSlide2 {
-	background-image: url("images/hp_banner_2.webp");
+	background-image: url("assets/images/hp_banner_2.webp");
 }
 #hpSlide3 {
-	background-image: url("images/hp_banner_3.webp");
+	background-image: url("assets/images/hp_banner_3.webp");
 }
 #hpSlide4 {
-	background-image: url("images/hp_banner_4.webp");
+	background-image: url("assets/images/hp_banner_4.webp");
 }
 #hpSlide5 {
-	background-image: url("images/hp_banner_5.webp");
+	background-image: url("assets/images/hp_banner_5.webp");
 }
 #hpProject #slideBox2 {
 	height: 925px;
 }
 #hpSlide6 {
-	background-image: url("images/hp_adscan_1.webp");
+	background-image: url("assets/images/hp_adscan_1.webp");
 }
 #hpSlide7 {
-	background-image: url("images/hp_adscan_2.webp");
+	background-image: url("assets/images/hp_adscan_2.webp");
 }
 #hpSlide8 {
-	background-image: url("images/hp_adscan_3.webp");
+	background-image: url("assets/images/hp_adscan_3.webp");
 }
 #hpSlide9 {
-	background-image: url("images/hp_adscan_4.webp");
+	background-image: url("assets/images/hp_adscan_4.webp");
 }
 #dipalermoProject .hero {
-	background-image: url('images/dipalermo.webp'); 
+	background-image: url('assets/images/dipalermo.webp'); 
 	background-position-x: 51%; 
 	background-position-y: 130%;
 }
 #dipalermoProject .image1 {
-	background-image: url("images/dipalermo_label_1.webp");
+	background-image: url("assets/images/dipalermo_label_1.webp");
 	height: 530px;
 }
 #trudeauProject .hero {
-	background-image: url('images/trudeauBread_wrapping_tile-gold.jpg');
+	background-image: url('assets/images/trudeauBread_wrapping_tile-gold.jpg');
 	background-size: initial;
 	background-repeat: repeat; 
 	background-position-x: 51%; 
 	background-position-y: 28%;
 }
 #baseChalkProject .hero {
-	background-image: url('images/baseChalk.jpg'); 
+	background-image: url('assets/images/baseChalk.jpg'); 
 	background-position-x: 0; 
 	background-position-y: 10%;
 }
@@ -441,26 +441,26 @@ button:focus {
 	height: 420px;
 }
 #baseChalkSlide1 {
-	background-image: url("images/baseChalk_logo_1.webp");
+	background-image: url("assets/images/baseChalk_logo_1.webp");
 }
 #baseChalkSlide2 {
-	background-image: url("images/baseChalk_logo_2.webp");
+	background-image: url("assets/images/baseChalk_logo_2.webp");
 }
 #baseChalkSlide3 {
-	background-image: url("images/baseChalk_logo_3.webp");
+	background-image: url("assets/images/baseChalk_logo_3.webp");
 }
 #baseChalkSlide4 {
-	background-image: url("images/baseChalk_logo_4.webp");
+	background-image: url("assets/images/baseChalk_logo_4.webp");
 }
 #baseChalkSlide5 {
-	background-image: url("images/baseChalk_logo_5.webp");
+	background-image: url("assets/images/baseChalk_logo_5.webp");
 }
 #baseChalkProject .image1 {
-	background-image: url("images/baseChalk_packaging.webp");
+	background-image: url("assets/images/baseChalk_packaging.webp");
 	height: 480px;
 }
 #sportsBasementProject .hero {
-	background-image: url('images/sportsBasement.webp'); 
+	background-image: url('assets/images/sportsBasement.webp'); 
 	background-position-x: 45%; 
 	background-position-y: 10%;
 }
@@ -704,7 +704,7 @@ button:hover {
 		/*width: 80%;*/
 	}
 	#occulumProject .image1 {
-		background-image: url("images/occulum_wood.webp");
+		background-image: url("assets/images/occulum_wood.webp");
 	}
 	#occulumProject .image2 {
 		width: 44%;
