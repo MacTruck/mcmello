@@ -4,7 +4,7 @@ var app = express();
 var jsonParser = bodyParser.json();
 
 app.set('view engine', 'ejs');
-app.use('/assets', express.static('assets'));
+app.use(express.static('./public'));
 
 app.listen(5000, function () {
 	console.log('App listening on port 5000');
