@@ -19,7 +19,7 @@ mongoose.connect('mongodb+srv://scott:high5ers@mcmello-cluster-2bzb4.mongodb.net
 // 	shape: String,
 // });
 
-// var Prints = mongoose.model('Prints', printSchema);
+//  var prints = mongoose.model('Prints', printSchema);
 
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
@@ -37,7 +37,7 @@ app.get('/index', function(req, res) {
 });
 
 app.get('/art', function(req, res) {
-	Prints.find({}, function(err, data){
+	db.prints.find({}, function(err, data){
 		if (err) throw err;
 		res.render('art', {prints: data});
 	});
