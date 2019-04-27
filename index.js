@@ -7,7 +7,7 @@ var jsonParser = bodyParser.json();
 
 // Connect to the database
 
-mongoose.connect('mongodb+srv://scott:high5ers@mcmello-cluster-2bzb4.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
+var db = mongoose.connect('mongodb+srv://scott:high5ers@mcmello-cluster-2bzb4.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
 
 // var printSchema = new mongoose.Schema({
 // 	id: String,
