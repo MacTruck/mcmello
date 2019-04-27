@@ -1,7 +1,25 @@
 var express = require('express');
+var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+
 var app = express();
 var jsonParser = bodyParser.json();
+
+// Connect to the database
+
+mongoose.connect('mongodb+srv://scott:high5ers@mcmello-cluster-2bzb4.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
+
+// var printSchema = new mongoose.Schema({
+// 	id: String,
+// 	title: String,
+// 	date: String,
+// 	image: String,
+// 	specs: String,
+// 	desc: String,
+// 	shape: String,
+// });
+
+// var Prints = mongoose.model('Prints', printSchema);
 
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
@@ -19,7 +37,10 @@ app.get('/index', function(req, res) {
 });
 
 app.get('/art', function(req, res) {
-	res.render('art');
+	Prints.find({}, function(err, data){
+		if (err) throw err;
+		res.render('art', {prints: data});
+	});
 });
 
 app.get('/about', function(req, res) {
