@@ -517,7 +517,7 @@ footer img {
 	display: block;
 	background: #333;
 	border-radius: 5px;
-	padding: 20px;
+	padding: 20px 20px 35px 20px;
 	color: #eee;
 	vertical-align: middle;
 	margin: 12px;
@@ -732,6 +732,7 @@ button:hover {
 	.printDesc {
 		display: inline-block;
 		width: 33%;
+		padding: 20px;
 		vertical-align: middle;
 		margin: 0;
 	}
