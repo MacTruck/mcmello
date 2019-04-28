@@ -52,7 +52,10 @@
 				});
 	// reset background off hover
 				item.addEventListener("mouseleave", () => {
-					if (clicked == false) { hero.style.background = "#191919"; }
+					if (clicked == false) {
+						hero.style.background = "url('assets/images/prints/background-stripe-black.png')";
+
+					}
 				});
 // if clicked move hero to the left and open clicked article
 				item.addEventListener("click", () => {

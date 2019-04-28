@@ -36,23 +36,12 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-app.get('/index', function(req, res) {
-	res.render('index');
-});
-
 app.get('/art', function(req, res) {
-	// prints.find({}, function(err, data){
-	// 	if (err) throw err;
 		res.render('art', {prints: prints});
-	});
-// });
+});
 
 app.get('/about', function(req, res) {
 	res.render('about');
-});
-
-app.get('/inquire', function(req, res) {
-	res.render('inquire');
 });
 
 app.post('/inquire', jsonParser, function(req, res) {

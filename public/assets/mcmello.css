@@ -43,6 +43,10 @@ h1, h2, h3, h4, h5 {
 	text-align: center;
 	text-transform: uppercase;
 }
+h2 {
+	font-size: 2rem;
+	letter-spacing: .2em;
+}
 h4 {
 	color: mediumorchid;	/* #777 */
 	letter-spacing: .2em;
@@ -124,9 +128,7 @@ nav ul li a:hover {
 	padding-bottom: 5px;
 }
 .hero {
-	background-image: #191919;
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-image: url("images/frequency.webp");
 	background-position: center;
 	position: relative;
 	width: 100%;
@@ -307,17 +309,7 @@ button:focus {
 	outline: 1px solid white;
 }
 .projectContent button {
-	border: 1px solid #555;
-	padding: 1.5em 2.5em;
-	color: #ccc;
-	letter-spacing: .05em;
-	background: rgba(0,0,0,0);
 	margin-top: 30px;
-	transition: .5s ease all;
-}
-.projectContent button:hover {
-	border: 1px solid white;
-	color: white;
 }
 #occulumProject .hero {
 	background-image: url('images/occulum.webp');
@@ -348,6 +340,7 @@ button:focus {
 }
 #griffithProject .hero {
 	background-image: url('images/griffith.webp');
+	background-size: cover;
 	background-position-y: 85%;
 }
 #griffithProject .image1 {
@@ -364,19 +357,19 @@ button:focus {
 }
 #frequencyProject .image1 {
 	background-image: url('images/frequency_artist_1.webp'); 
-	height: 530px;
+	height: 300px;
 }
 #frequencyProject .image2 {
 	background-image: url('images/frequency_label-dark.jpg'); 
-	height: 540px;
+	height: 300px;
 }
 #frequencyProject .image3 {
 	background-image: url('images/frequency_tastingNotes_1.webp'); 
-	height: 475px;
+	height: 300px;
 }
 #frequencyProject .image4 {
 	background-image: url('images/frequency_website_1.webp'); 
-	height: 1110px;
+	height: 500px;
 	background-position: top;
 }
 #hpProject .hero {
@@ -563,25 +556,24 @@ footer img {
 	font-size: .75rem;
     font-weight: 500;
     font-style: italic;
-    border: 1.5px solid rgba(255,255,255,.25);
+    letter-spacing: .05em;
+    border: 1px solid rgba(255,255,255,0);
     border-radius: 50px;
     padding: 0 6px;
     float: left;
     transition: .5s ease all;
 }
 .inquireCircle:hover {
-	border: 1.5px solid white;
+	border: 1px solid white;
 	cursor: pointer;
 }
 #inquiry form {
 	position: relative;
-	width: 800px;
-	padding: 40px 50px;
+	padding: 40px 20px;
 	border-radius: 5px;
 	background: #333;
 	color: white;
-	left: 50%;
-	margin-left: -400px;
+	margin: 12px;
 	margin-top: 50px;
 }
 #inquiry h3 {
@@ -631,7 +623,7 @@ button {
 	font-size: 1em;
 	font-weight: 100;
 	text-transform: uppercase;
-	letter-spacing: .125em;
+	letter-spacing: .2em;
     padding: 15px;
     width: 14em;
     margin-top: 5px;
@@ -681,6 +673,9 @@ button:hover {
 	#backArrow {
 		top: 110px;
 	}
+	.hero {
+		background-image: url("images/prints/background-stripe-black.png");
+	}
 	.hero article {
 		width: 25%;
 		height: 350px;
@@ -712,6 +707,18 @@ button:hover {
 		left: 50%;
 		margin-left: -22%;
 	}
+	#frequencyProject .image1 {
+		height: 530px;
+	}
+	#frequencyProject .image2 {
+		height: 540px;
+	}
+	#frequencyProject .image3 {
+		height: 475px;
+	}
+	#frequencyProject .image4 {
+		height: 1110px;
+	}
 	footer h3 {
 		letter-spacing: .75em;
 		opacity: .75;
@@ -735,5 +742,12 @@ button:hover {
 		padding: 20px;
 		vertical-align: middle;
 		margin: 0;
+	}
+	#inquiry form {
+		width: 800px;
+		padding: 40px 50px;
+		left: 50%;
+		margin-right: 0;
+		margin-left: -400px;
 	}
 }
