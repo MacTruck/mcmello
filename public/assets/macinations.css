@@ -504,6 +504,7 @@ footer img {
 .print {
 	display: block;
 	position: relative;
+	text-align: center;
 }
 .wide {
 	max-width: 100%;
