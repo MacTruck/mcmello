@@ -37,7 +37,7 @@ a {
 	text-decoration: none;
 }
 h1, h2, h3, h4, h5 {
-	font-weight: 100;
+	font-weight: 400;
 	letter-spacing: .25em;
 	margin-bottom: .5em;
 	text-align: center;
@@ -159,7 +159,7 @@ nav ul li a:hover {
 }
 .itemNumber {
 	font-size: .75rem;
-	font-weight: 500;
+	font-weight: 400;
 	letter-spacing: .075em;
 }
 .itemDash {
@@ -470,11 +470,11 @@ footer {
 	height: 300px;
 	text-align: center;
 	color: white;
-	font-weight: 100;
+	font-weight: 400;
 	border-top: 1px solid black;
 }
 footer h3 {
-	font-weight: 500;
+	font-weight: 400;
 	letter-spacing: .2em;
 	margin: 3em 10px;
 	text-transform: uppercase;
