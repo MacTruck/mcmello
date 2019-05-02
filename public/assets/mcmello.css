@@ -58,7 +58,6 @@ body {
 	background: #191919;
 }
 header {
-	background: #191919;
 	width: 100%;
 	text-align: center;
 	padding: 21px;
@@ -586,7 +585,7 @@ label {
 	color: #eaeaea;
 	font-family: 'Raleway';
     font-size: 9pt;
-    font-weight: 100;
+    font-weight: 400;
     letter-spacing: .125em;
     text-transform: uppercase;
     margin-bottom: .5em;
