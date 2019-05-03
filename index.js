@@ -8,14 +8,7 @@ var jsonParser = bodyParser.json();
 
 // Connect to the database
 
-var url;
-
-fs.readFile('./connect.txt', function read(err, data) {
-	if (err) {
-		console.log(err);
-	}
-	url = data;
-}
+var url = fs.readFileSync('./connect.txt').toString();
 
 mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
     if (err) { console.log('Oh no... Error:', err); }
