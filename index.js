@@ -1,13 +1,21 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var fs = require('fs');
 
 var app = express();
 var jsonParser = bodyParser.json();
 
 // Connect to the database
 
-var url = 'mongodb+srv://scott:high5ers@mcmello-cluster-2bzb4.mongodb.net/mcmello-database?retryWrites=true';
+var url;
+
+fs.readFile('./connect.txt', function read(err, data) {
+	if (err) {
+		console.log(err);
+	}
+	url = data;
+}
 
 mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
     if (err) { console.log('Oh no... Error:', err); }

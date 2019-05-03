@@ -131,7 +131,7 @@
 				var nextPosition = nextPrintContainer.getBoundingClientRect();
 				var nextMidpoint = (nextPosition.bottom - nextPosition.top) / 2 + nextPosition.top;
 				var nextTop = nextMidpoint - (windowHeight / 2);
-				window.scrollBy(0, nextTop);
+				window.scrollBy(0, nextMidpoint);
 			});
 		}
 
