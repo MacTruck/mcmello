@@ -44,7 +44,7 @@
 // set background image of hero as articles on hovered
 				item.addEventListener("mouseover", () => {
 					if (clicked == false) {
-						hero.style.background = `url("assets/images/${itemName}.webp")`;
+						hero.style.background = `url("assets/images/${itemName}.jpg")`;
 						hero.style.backgroundSize = "cover";
 						hero.style.backgroundRepeat = "no-repeat";
 						hero.style.backgroundPosition = "center";
@@ -60,7 +60,7 @@
 // if clicked move hero to the left and open clicked article
 				item.addEventListener("click", () => {
 					hero.style.position = "absolute";
-					hero.style.backgroundImage = `url("assets/images/${itemName}.webp")`;
+					hero.style.backgroundImage = `url("assets/images/${itemName}.jpg")`;
 					header.scrollIntoView();
 					hero.style.transform = "translateX(-100%)";
 					itemProject.classList.add("active");

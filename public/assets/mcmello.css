@@ -64,29 +64,29 @@ header {
 	height: 73px;
 }
 header .icon {
-	height: 25px;
+	height: 40px;
 	float: left;
-	enable-background:new 0 0 77.4 87.7;
+	margin-top: -5px;
 }
-.iconTop {
+#iconTop path {
 	fill: var(--purple3);
 	transition: 1s ease all;
 	    /*fill: #02AAB0;*/
 }
-.iconMiddle {
+#iconTop .dot {
+	fill: var(--purple4);
+	transition: 1s ease all;
+	    /*fill: #1693A5;*/
+}
+#iconMiddle path {
 	fill: var(--purple2);
 	transition: 1s ease all;
 	    /*fill: #00CDAC;*/
 }
-.iconBottom {
+#iconBottom path {
 	fill: var(--purple1);
 	transition: 1s ease all;
 	    /*fill: #C3FF68;*/
-}
-.iconDot {
-	fill: var(--purple4);
-	transition: 1s ease all;
-	    /*fill: #1693A5;*/
 }
 nav {
 	float: right;
@@ -127,7 +127,7 @@ nav ul li a:hover {
 	padding-bottom: 5px;
 }
 .hero {
-	background-image: url("images/frequency.webp");
+	background-image: url("images/frequency.jpg");
 	background-position: center;
 	position: relative;
 	width: 100%;
@@ -311,34 +311,34 @@ button:focus {
 	margin-top: 30px;
 }
 #occulumProject .hero {
-	background-image: url('images/occulum.webp');
+	background-image: url('images/occulum.jpg');
 	background-position-x: 68%;
 	background-position-y: 18%;
 }
 #occulumProject .image1 {
-	background-image: url("images/occulum_wood.webp");
-	background-position-y: -40px;
-	height: 550px;
+	background-image: url("images/occulum_wood.jpg");
+	background-position-y: 0;
+	height: 600px;
 }
 #occulumProject .image2 {
-	background-image: url("images/occulum_bottle_mock.webp");
+	background-image: url("images/occulum_bottle_mock.png");
 	height: 800px;
 	position: relative;
 }
 #occulumProject #slide1 {
-	background-image: url("images/occulum_sketches.webp");
+	background-image: url("images/occulum_sketches_1.jpg");
 }
 #occulumProject #slide2 {
-	background-image: url("images/occulum_sketches_2.webp");
+	background-image: url("images/occulum_sketches_2.jpg");
 }
 #occulumProject #slide3 {
-	background-image: url("images/occulum_sketches_3.webp");
+	background-image: url("images/occulum_sketches_3.jpg");
 }
 #occulumProject #slide4 {
-	background-image: url("images/occulum_sketches_4.webp");
+	background-image: url("images/occulum_sketches_4.jpg");
 }
 #griffithProject .hero {
-	background-image: url('images/griffith.webp');
+	background-image: url('images/griffith.jpg');
 	background-size: cover;
 	background-position-y: 85%;
 }
@@ -351,7 +351,7 @@ button:focus {
 	height: 444px;
 }
 #frequencyProject .hero {
-	background-image: url('images/frequency.webp'); 
+	background-image: url('images/frequency.jpg'); 
 	background-position-y: 75%;
 }
 #frequencyProject .image1 {
@@ -372,7 +372,7 @@ button:focus {
 	background-position: top;
 }
 #hpProject .hero {
-	background-image: url('images/hp.webp');
+	background-image: url('images/hp.jpg');
 	background-position-y: 25%;
 }
 #hpProject .slideBox {
@@ -409,12 +409,12 @@ button:focus {
 	background-image: url("images/hp_adscan_4.webp");
 }
 #dipalermoProject .hero {
-	background-image: url('images/dipalermo.webp'); 
+	background-image: url('images/dipalermo.jpg'); 
 	background-position-x: 51%; 
 	background-position-y: 130%;
 }
 #dipalermoProject .image1 {
-	background-image: url("images/dipalermo_label_1.webp");
+	background-image: url("images/dipalermo_label_1.jpg");
 	height: 530px;
 }
 #trudeauProject .hero {
@@ -452,7 +452,7 @@ button:focus {
 	height: 480px;
 }
 #sportsBasementProject .hero {
-	background-image: url('images/sportsBasement.webp'); 
+	background-image: url('images/sportsBasement.jpg'); 
 	background-position-x: 45%; 
 	background-position-y: 10%;
 }
@@ -473,7 +473,7 @@ footer h3 {
 	opacity: .5;
 }
 footer img {
-	height: 20%;
+	height: 30%;
 	opacity: .05;
 	margin-bottom: 75px;
 }
@@ -566,6 +566,9 @@ footer img {
 	border: 1px solid white;
 	cursor: pointer;
 }
+#inquiry {
+	padding-top: 100px;
+}
 #inquiry form {
 	position: relative;
 	padding: 40px 20px;
@@ -573,7 +576,6 @@ footer img {
 	background: #333;
 	color: white;
 	margin: 12px;
-	margin-top: 50px;
 }
 #inquiry h3 {
 	font-size: 1.5rem;
@@ -699,7 +701,7 @@ button:hover {
 		/*width: 80%;*/
 	}
 	#occulumProject .image1 {
-		background-image: url("images/occulum_wood.webp");
+		background-image: url("images/occulum_wood.jpg");
 	}
 	#occulumProject .image2 {
 		width: 44%;
