@@ -343,11 +343,11 @@ button:focus {
 	background-position-y: 85%;
 }
 #griffithProject .image1 {
-	background-image: url("images/griffith_main.webp");
+	background-image: url("images/griffith_main.jpg");
 	height: 650px;
 }
 #griffithProject .image2 {
-	background-image: url("images/griffith_overview.webp");
+	background-image: url("images/griffith_overview.jpg");
 	height: 444px;
 }
 #frequencyProject .hero {
@@ -355,7 +355,7 @@ button:focus {
 	background-position-y: 75%;
 }
 #frequencyProject .image1 {
-	background-image: url('images/frequency_artist_1.webp'); 
+	background-image: url('images/frequency_artist_1.jpg'); 
 	height: 300px;
 }
 #frequencyProject .image2 {
@@ -363,11 +363,11 @@ button:focus {
 	height: 300px;
 }
 #frequencyProject .image3 {
-	background-image: url('images/frequency_tastingNotes_1.webp'); 
+	background-image: url('images/frequency_tastingNotes_1.jpg'); 
 	height: 300px;
 }
 #frequencyProject .image4 {
-	background-image: url('images/frequency_website_1.webp'); 
+	background-image: url('images/frequency_website_1.jpg'); 
 	height: 500px;
 	background-position: top;
 }
@@ -379,34 +379,34 @@ button:focus {
 	height: 300px;
 }
 #hpSlide1 {
-	background-image: url("images/hp_banner_1.webp");
+	background-image: url("images/hp_banner_1.jpg");
 }
 #hpSlide2 {
-	background-image: url("images/hp_banner_2.webp");
+	background-image: url("images/hp_banner_2.jpg");
 }
 #hpSlide3 {
-	background-image: url("images/hp_banner_3.webp");
+	background-image: url("images/hp_banner_3.jpg");
 }
 #hpSlide4 {
-	background-image: url("images/hp_banner_4.webp");
+	background-image: url("images/hp_banner_4.jpg");
 }
 #hpSlide5 {
-	background-image: url("images/hp_banner_5.webp");
+	background-image: url("images/hp_banner_5.jpg");
 }
 #hpProject #slideBox2 {
 	height: 925px;
 }
 #hpSlide6 {
-	background-image: url("images/hp_adscan_1.webp");
+	background-image: url("images/hp_adscan_1.jpg");
 }
 #hpSlide7 {
-	background-image: url("images/hp_adscan_2.webp");
+	background-image: url("images/hp_adscan_2.jpg");
 }
 #hpSlide8 {
-	background-image: url("images/hp_adscan_3.webp");
+	background-image: url("images/hp_adscan_3.jpg");
 }
 #hpSlide9 {
-	background-image: url("images/hp_adscan_4.webp");
+	background-image: url("images/hp_adscan_4.jpg");
 }
 #dipalermoProject .hero {
 	background-image: url('images/dipalermo.jpg'); 
@@ -433,22 +433,22 @@ button:focus {
 	height: 420px;
 }
 #baseChalkSlide1 {
-	background-image: url("images/baseChalk_logo_1.webp");
+	background-image: url("images/baseChalk_logo_1.jpg");
 }
 #baseChalkSlide2 {
-	background-image: url("images/baseChalk_logo_2.webp");
+	background-image: url("images/baseChalk_logo_2.jpg");
 }
 #baseChalkSlide3 {
-	background-image: url("images/baseChalk_logo_3.webp");
+	background-image: url("images/baseChalk_logo_3.jpg");
 }
 #baseChalkSlide4 {
-	background-image: url("images/baseChalk_logo_4.webp");
+	background-image: url("images/baseChalk_logo_4.jpg");
 }
 #baseChalkSlide5 {
-	background-image: url("images/baseChalk_logo_5.webp");
+	background-image: url("images/baseChalk_logo_5.jpg");
 }
 #baseChalkProject .image1 {
-	background-image: url("images/baseChalk_packaging.webp");
+	background-image: url("images/baseChalk_packaging.jpg");
 	height: 480px;
 }
 #sportsBasementProject .hero {
