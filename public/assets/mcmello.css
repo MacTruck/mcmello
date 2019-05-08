@@ -224,6 +224,7 @@ nav ul li a:hover {
 	height: 250px;
 	margin: 50px 0;
 	z-index: 0;
+	background-size: cover;
 }
 .projectContent {
 	position: relative;
@@ -290,7 +291,7 @@ nav ul li a:hover {
 	cursor: pointer;
 	text-align: center;
 	color: rgba(255,255,255,.75);
-	font-size: 3em;
+	font-size: 2em;
 	width: 1.25em;
 	background: rgba(0,0,0,.125);
 	transition: .5s ease color;
@@ -312,13 +313,11 @@ button:focus {
 }
 #occulumProject .hero {
 	background-image: url('images/occulum.jpg');
-	background-position-x: 68%;
-	background-position-y: 18%;
+	background-size: cover;
 }
 #occulumProject .image1 {
 	background-image: url("images/occulum_wood.jpg");
 	background-position-y: 0;
-	height: 600px;
 }
 #occulumProject .image2 {
 	background-image: url("images/occulum_bottle_mock.png");
@@ -344,11 +343,10 @@ button:focus {
 }
 #griffithProject .image1 {
 	background-image: url("images/griffith_main.jpg");
-	height: 650px;
 }
 #griffithProject .image2 {
 	background-image: url("images/griffith_overview.jpg");
-	height: 444px;
+	height: 205px;
 }
 #frequencyProject .hero {
 	background-image: url('images/frequency.jpg'); 
@@ -364,7 +362,7 @@ button:focus {
 }
 #frequencyProject .image3 {
 	background-image: url('images/frequency_tastingNotes_1.jpg'); 
-	height: 300px;
+	height: 250px;
 }
 #frequencyProject .image4 {
 	background-image: url('images/frequency_website_1.jpg'); 
@@ -376,7 +374,13 @@ button:focus {
 	background-position-y: 25%;
 }
 #hpProject .slideBox {
-	height: 300px;
+	height: 100px;
+}
+#hpProject .slideBox .navButton {
+	top: 28%;
+}
+#hpProject #slideBox2 .navButton {
+	top: 42%;
 }
 #hpSlide1 {
 	background-image: url("images/hp_banner_1.jpg");
@@ -394,7 +398,7 @@ button:focus {
 	background-image: url("images/hp_banner_5.jpg");
 }
 #hpProject #slideBox2 {
-	height: 925px;
+	height: 420px;
 }
 #hpSlide6 {
 	background-image: url("images/hp_adscan_1.jpg");
@@ -415,14 +419,18 @@ button:focus {
 }
 #dipalermoProject .image1 {
 	background-image: url("images/dipalermo_label_1.jpg");
-	height: 530px;
+	height: 270px;
 }
 #trudeauProject .hero {
 	background-image: url('images/trudeauBread_wrapping_tile-gold.jpg');
-	background-size: initial;
+	background-size: contain;
 	background-repeat: repeat; 
 	background-position-x: 51%; 
 	background-position-y: 28%;
+}
+#trudeauProject .image1 {
+	background-image: url('images/trudeau.jpg');
+	height: 400px;
 }
 #baseChalkProject .hero {
 	background-image: url('images/baseChalk.jpg'); 
@@ -430,7 +438,7 @@ button:focus {
 	background-position-y: 10%;
 }
 #baseChalkProject .slideBox {
-	height: 420px;
+	height: 250px;
 }
 #baseChalkSlide1 {
 	background-image: url("images/baseChalk_logo_1.jpg");
@@ -449,7 +457,7 @@ button:focus {
 }
 #baseChalkProject .image1 {
 	background-image: url("images/baseChalk_packaging.jpg");
-	height: 480px;
+	height: 220px;
 }
 #sportsBasementProject .hero {
 	background-image: url('images/sportsBasement.jpg'); 
@@ -700,13 +708,27 @@ button:hover {
 	.projectContent .image {
 		/*width: 80%;*/
 	}
-	#occulumProject .image1 {
-		background-image: url("images/occulum_wood.jpg");
+	.navButton {
+		top: 42%;
+		font-size: 3em;
 	}
 	#occulumProject .image2 {
 		width: 44%;
 		left: 50%;
 		margin-left: -22%;
+	}
+	#occulumProject .hero {
+		background-position-x: 68%;
+		background-position-y: 18%;
+	}
+	#occulumProject .image1 {
+		height: 600px;
+	}
+	#griffithProject .image1 {
+		height: 650px;
+	}
+	#griffithProject .image2 {
+		height: 444px;
 	}
 	#frequencyProject .image1 {
 		height: 530px;
@@ -719,6 +741,24 @@ button:hover {
 	}
 	#frequencyProject .image4 {
 		height: 1110px;
+	}
+	#hpProject .slideBox {
+		height: 300px;
+	}
+	#hpProject #slideBox2 {
+		height: 925px;
+	}
+	#dipalermoProject .image1 {
+		height: 530px;
+	}
+	#trudeauProject .hero {
+		background-size: initial;
+	}
+	#baseChalkProject .image1 {
+		height: 480px;
+	}
+	#baseChalkProject .slideBox {
+		height: 420px;
 	}
 	footer h3 {
 		letter-spacing: .75em;
