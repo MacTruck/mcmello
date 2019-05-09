@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-	<% include partials/head.ejs %>
+	<head>
+		<% include partials/head.ejs %>
+	</head>
 <body>
+	<div id="preload" style="width: 5px; height: 5px;"></div>
 	<% include partials/header.ejs %>
 <!-- BACK ARROW CODE -->
 	<% include partials/backArrow.ejs %>
@@ -77,7 +80,7 @@
 		<article id="occulumProject">
 			<h2>Occulum</h2>
 			<h4>— Label Design —</h4>
-			<div class="hero"></div>
+			<div class="topImage"></div>
 			<div class="projectContent">
 				<div class="dash">—</div>
 				<h3>Medusa's Glare</h3>
@@ -107,7 +110,7 @@
 		<article id="griffithProject">
 			<h2>Griffith Observatory</h2>
 			<h4>— Web Design & Development —</h4>
-			<div class="hero"></div>
+			<div class="topImage"></div>
 			<div class="projectContent">
 				<div class="dash">—</div>
 				<h3>The Ultimate Overlook</h3>
@@ -121,7 +124,7 @@
 		<article id="frequencyProject">
 			<h2>Frequency Wine Co.</h2>
 			<h4>— Branding & Labelling —</h4>
-			<div class="hero"></div>
+			<div class="topImage"></div>
 			<div class="projectContent">
 				<div class="dash">—</div>
 				<h3>Harmony in a Bottle</h3>
@@ -142,7 +145,7 @@
 		<article id="hpProject">
 			<h2>Hewlett-Packard</h2>
 			<h4>— Web Dev & Merchandising —</h4>
-			<div class="hero"></div>
+			<div class="topImage"></div>
 			<div class="projectContent">
 				<div class="dash">—</div>
 				<h3>Innovation at Work</h3>
@@ -188,7 +191,7 @@
 		<article id="dipalermoProject">
 			<h2>DiPalermo</h2>
 			<h4>— Label Design —</h4>
-			<div class="hero" style=""></div>
+			<div class="topImage"></div>
 			<div class="projectContent">
 				<div class="dash">—</div>
 				<h3>Regal Elegance</h3>
@@ -200,7 +203,7 @@
 		<article id="trudeauProject">
 			<h2>Trudeau Bread Co.</h2>
 			<h4>— Packaging Design —</h4>
-			<div class="hero"></div>
+			<div class="topImage"></div>
 			<div class="projectContent">
 				<div class="dash">—</div>
 				<h3>Heaven Rising</h3>
@@ -213,7 +216,7 @@
 		<article id="baseChalkProject">
 			<h2>Base Chalk</h2>
 			<h4>— Packaging Design —</h4>
-			<div class="hero"></div>
+			<div class="topImage"></div>
 			<div class="projectContent">
 				<div class="dash">—</div>
 				<h3>Solid Footing</h3>
@@ -245,7 +248,7 @@
 		<article id="sportsBasementProject">
 			<h2>Sports Basement</h2>
 			<h4>— Merchandising Signage —</h4>
-			<div class="hero"></div>
+			<div class="topImage"></div>
 			<div class="projectContent">
 				<div class="dash">—</div>
 				<h3>Solid Footing</h3>
@@ -258,5 +261,19 @@
 	<% include partials/footer.ejs %>
 
 	<script src="assets/mcmello.js"></script>
+	<script type="text/javascript">
+		var preload = function() {
+			var heroImage = document.querySelector(".hero");
+			var heroImages = document.querySelectorAll(".hero article");
+			heroImages.forEach(image => {
+				var preloadImage = document.createElement("div");
+				preloadImage.style.visibility = "hidden";
+				preloadImage.style.backgroundImage = `url(assets/images/${image.id}.jpg)`;
+				document.body.insertBefore(preloadImage, heroImage);
+			});
+		}
+		
+		preload();
+	</script>
 </body>
 </html>

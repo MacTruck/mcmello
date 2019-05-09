@@ -1,3 +1,58 @@
+// lazyload images for print page
+		document.addEventListener("DOMContentLoaded", function() {
+			var lazyloadImages;
+
+			if ("IntersectionObserver" in window) {
+				lazyloadImages = document.querySelectorAll(".lazy");
+				var imageObserver = new IntersectionObserver(function(entries, observer) {
+					entries.forEach(function(entry) {
+						if (entry.isIntersecting) {
+							var image = entry.target;
+							image.src = image.dataset.src
+							image.classList.remove("lazy");
+							image.unobserve(image);
+						}
+					});
+				});
+
+				lazyloadImages.forEach(function(image) {
+					imageObserver.observe(image);
+				});
+			} else {
+				var lazyloadThrottleTimeout;
+				lazyloadImages = document.querySelectorAll(".lazy");
+
+				function lazyload() {
+					if (lazyloadThrottleTimeout) {
+						clearTimeout(lazyloadThrottleTimeout);
+					}
+
+					lazyloadThrottleTimeout = setTimeout(function() {
+						var scrollTop = window.pageYOffset;
+
+						lazyloadImages.forEach(function(img) {
+							if(img.offsetTop < (window.innerHeight + scrollTop)) {
+								img.src = img.dataset.src;
+								img.classList.remove("lazy");
+							}
+						});
+
+						if (lazyloadImages.length == 0) {
+							document.removeEventListener("scroll", lazyload);
+							window.removeEventListener("resize", lazyload);
+							window.removeEventListener("orientation", lazyload);
+						}
+					}, 20);
+				}
+
+				document.addEventListener("scroll", lazyload);
+				window.addEventListener("resize", lazyload);
+				window.addEventListener("orientation", lazyload);
+			}
+		});
+
+
+
 // functionality for hero slide header icon
 		var items = document.querySelectorAll(".hero article");
 		var header = document.querySelector("header");
@@ -115,24 +170,26 @@
 				clicked = false;
 			});
 // bottomArrow clicked (for prints page), advances to next print
-			bottomArrow.addEventListener("click", () => {
-				var currentContainer = 0;
-	// determine first printContainer with midpoint in viewport
-				printContainers.forEach(printContainer => {
-					var position = printContainer.getBoundingClientRect();
-					var midpoint = (position.bottom - position.top) / 2 + position.top;
-					if (midpoint >= 0 && currentContainer == 0) {
-						currentContainer = Number(printContainer.id.match(/\d+/g));
-					}
+			if (document.querySelector(".print")) {
+				bottomArrow.addEventListener("click", () => {
+					var currentContainer = 0;
+		// determine first printContainer with midpoint in viewport
+					printContainers.forEach(printContainer => {
+						var position = printContainer.getBoundingClientRect();
+						var midpoint = (position.bottom - position.top) / 2 + position.top;
+						if (midpoint >= 0 && currentContainer == 0) {
+							currentContainer = Number(printContainer.id.match(/\d+/g));
+						}
+					});
+		// select and scroll to midpoint of next printContainer
+					var nextContainer = currentContainer + 1 < printContainerCounter ? currentContainer + 1 : 1;
+					var nextPrintContainer = document.querySelector(`#printContainer${nextContainer}`);
+					var nextPosition = nextPrintContainer.getBoundingClientRect();
+					var nextMidpoint = (nextPosition.bottom - nextPosition.top) / 2 + nextPosition.top;
+					var nextTop = nextMidpoint - (windowHeight / 2);
+					window.scrollBy(0, nextTop);
 				});
-	// select and scroll to midpoint of next printContainer
-				var nextContainer = currentContainer + 1 < printContainerCounter ? currentContainer + 1 : 1;
-				var nextPrintContainer = document.querySelector(`#printContainer${nextContainer}`);
-				var nextPosition = nextPrintContainer.getBoundingClientRect();
-				var nextMidpoint = (nextPosition.bottom - nextPosition.top) / 2 + nextPosition.top;
-				var nextTop = nextMidpoint - (windowHeight / 2);
-				window.scrollBy(0, nextTop);
-			});
+			}
 		}
 
 		addListeners();

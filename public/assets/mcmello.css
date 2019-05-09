@@ -220,7 +220,7 @@ nav ul li a:hover {
 .projects article.active {
 	display: block;
 }
-.projects .hero {
+.projects .topImage {
 	height: 250px;
 	margin: 50px 0;
 	z-index: 0;
@@ -311,7 +311,7 @@ button:focus {
 .projectContent button {
 	margin-top: 30px;
 }
-#occulumProject .hero {
+#occulumProject .topImage {
 	background-image: url('images/occulum.jpg');
 	background-size: cover;
 }
@@ -336,7 +336,7 @@ button:focus {
 #occulumProject #slide4 {
 	background-image: url("images/occulum_sketches_4.jpg");
 }
-#griffithProject .hero {
+#griffithProject .topImage {
 	background-image: url('images/griffith.jpg');
 	background-size: cover;
 	background-position-y: 85%;
@@ -348,16 +348,16 @@ button:focus {
 	background-image: url("images/griffith_overview.jpg");
 	height: 205px;
 }
-#frequencyProject .hero {
+#frequencyProject .topImage {
 	background-image: url('images/frequency.jpg'); 
 	background-position-y: 75%;
 }
 #frequencyProject .image1 {
-	background-image: url('images/frequency_artist_1.jpg'); 
+	background-image: url('images/frequency_label-dark.jpg'); 
 	height: 300px;
 }
 #frequencyProject .image2 {
-	background-image: url('images/frequency_label-dark.jpg'); 
+	background-image: url('images/frequency_artist_1.jpg'); 
 	height: 300px;
 }
 #frequencyProject .image3 {
@@ -369,7 +369,7 @@ button:focus {
 	height: 500px;
 	background-position: top;
 }
-#hpProject .hero {
+#hpProject .topImage {
 	background-image: url('images/hp.jpg');
 	background-position-y: 25%;
 }
@@ -412,7 +412,7 @@ button:focus {
 #hpSlide9 {
 	background-image: url("images/hp_adscan_4.jpg");
 }
-#dipalermoProject .hero {
+#dipalermoProject .topImage {
 	background-image: url('images/dipalermo.jpg'); 
 	background-position-x: 51%; 
 	background-position-y: 130%;
@@ -421,7 +421,7 @@ button:focus {
 	background-image: url("images/dipalermo_label_1.jpg");
 	height: 270px;
 }
-#trudeauProject .hero {
+#trudeauProject .topImage {
 	background-image: url('images/trudeauBread_wrapping_tile-gold.jpg');
 	background-size: contain;
 	background-repeat: repeat; 
@@ -432,7 +432,7 @@ button:focus {
 	background-image: url('images/trudeau.jpg');
 	height: 400px;
 }
-#baseChalkProject .hero {
+#baseChalkProject .topImage {
 	background-image: url('images/baseChalk.jpg'); 
 	background-position-x: 0; 
 	background-position-y: 10%;
@@ -459,7 +459,7 @@ button:focus {
 	background-image: url("images/baseChalk_packaging.jpg");
 	height: 220px;
 }
-#sportsBasementProject .hero {
+#sportsBasementProject .topImage {
 	background-image: url('images/sportsBasement.jpg'); 
 	background-position-x: 45%; 
 	background-position-y: 10%;
@@ -692,7 +692,7 @@ button:hover {
 	.itemLetter {
 		display: block;
 	}
-	.projects .hero {
+	.projects .topImage {
 		height: 350px;
 		background-attachment: fixed;
 	}
@@ -717,7 +717,7 @@ button:hover {
 		left: 50%;
 		margin-left: -22%;
 	}
-	#occulumProject .hero {
+	#occulumProject .topImage {
 		background-position-x: 68%;
 		background-position-y: 18%;
 	}
@@ -731,10 +731,10 @@ button:hover {
 		height: 444px;
 	}
 	#frequencyProject .image1 {
-		height: 530px;
+		height: 540px;
 	}
 	#frequencyProject .image2 {
-		height: 540px;
+		height: 530px;
 	}
 	#frequencyProject .image3 {
 		height: 475px;
@@ -751,7 +751,7 @@ button:hover {
 	#dipalermoProject .image1 {
 		height: 530px;
 	}
-	#trudeauProject .hero {
+	#trudeauProject .topImage {
 		background-size: initial;
 	}
 	#baseChalkProject .image1 {
@@ -791,4 +791,8 @@ button:hover {
 		margin-right: 0;
 		margin-left: -400px;
 	}
+}
+
+.lazy {
+	background-image: none !important;
 }

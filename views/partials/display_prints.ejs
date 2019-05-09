@@ -4,7 +4,7 @@
 
 	<% prints.forEach(print => { %>
 		<div class="printContainer" id="<%= print.id %>" style="margin-top: 50px;">		
-			<div class="print"><img class="shadowed <%= print.shape %>" src="<%= print.image %>"></div>
+			<div class="print"><img class="shadowed <%= print.shape %> lazy" src="" data-src="<%= print.image %>"></div>
 			<div class="printDesc">
 				<h2><%= print.title %></h2>
 				<em><%= print.specs %></em>
