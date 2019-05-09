@@ -149,10 +149,10 @@
 							var image = entry.target;
 							image.src = image.dataset.src
 							image.classList.remove("lazy");
-							image.unobserve(image);
+							imageObserver.unobserve(image);
 						}
 					});
-				}, { root: null, rootMargin: '0 0 1000px 0'});
+				}, { root: null, rootMargin: '0px 0px 300px 0px'});
 
 				lazyloadImages.forEach(function(image) {
 					imageObserver.observe(image);
