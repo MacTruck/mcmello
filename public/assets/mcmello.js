@@ -6,7 +6,7 @@
 			var iconTop = document.querySelectorAll(".iconTop");
 			var iconMiddle = document.querySelectorAll(".iconMiddle");
 			var iconBottom = document.querySelectorAll(".iconBottom");
-			var iconDot = document.querySelectorAll(".iconDot");
+			var iconDot = document.querySelectorAll(".dot");
 		var backArrow = document.querySelector("#backArrow");
 		var bottomArrow = document.querySelector("#bottomArrow");
 		var title = document.querySelector(".title");
@@ -27,7 +27,7 @@
 			iconTop.forEach(path => path.style.fill = "var(--green3)");
 			iconMiddle.forEach(path => path.style.fill = "var(--green2)");
 			iconBottom.forEach(path => path.style.fill = "var(--green1)");
-			iconDot.forEach(path => path.style.fill = "var(--green4)");
+			iconDot.forEach(path => path.style.fill = "orange");
 		});
 	// change icon color back off hover
 		icon.addEventListener("mouseleave", () => {

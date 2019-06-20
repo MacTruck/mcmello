@@ -68,22 +68,22 @@ header .icon {
 	float: left;
 	margin-top: -5px;
 }
-#iconTop path {
+.iconTop {
 	fill: var(--purple3);
 	transition: 1s ease all;
 	    /*fill: #02AAB0;*/
 }
-#iconTop .dot {
+.dot {
 	fill: var(--purple4);
 	transition: 1s ease all;
 	    /*fill: #1693A5;*/
 }
-#iconMiddle path {
+.iconMiddle {
 	fill: var(--purple2);
 	transition: 1s ease all;
 	    /*fill: #00CDAC;*/
 }
-#iconBottom path {
+.iconBottom {
 	fill: var(--purple1);
 	transition: 1s ease all;
 	    /*fill: #C3FF68;*/
