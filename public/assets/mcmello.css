@@ -100,7 +100,7 @@ nav ul li {
 	margin-right: 30px;
 	color: #ddd;
 	font-size: .9rem;
-	letter-spacing: .075em;
+	letter-spacing: .1em;
 	text-transform: uppercase;
 }
 nav ul li:first-child {

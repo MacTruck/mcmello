@@ -27,7 +27,7 @@
 			iconTop.forEach(path => path.style.fill = "var(--green3)");
 			iconMiddle.forEach(path => path.style.fill = "var(--green2)");
 			iconBottom.forEach(path => path.style.fill = "var(--green1)");
-			iconDot.forEach(path => path.style.fill = "orange");
+			iconDot.forEach(path => path.style.fill = "var(--green4)");
 		});
 	// change icon color back off hover
 		icon.addEventListener("mouseleave", () => {
