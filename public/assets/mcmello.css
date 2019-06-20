@@ -608,19 +608,20 @@ label {
 	width: 100%;
 	font-family: 'Raleway';
 	font-size: 1.125rem;
-	line-height: .0125em;
 	line-height: 1.25em;
-	color: mediumorchid;
+	letter-spacing: .05em;
+	color: darkorchid;
 	background-color: whitesmoke;
 	margin-bottom: 25px;
 	border: none;
+	border-radius: 3px;
 	padding: 10px;
 	box-sizing: border-box;
 }
 [type="text"]:focus, textarea:focus {
 	outline: none;
 	/*border: 1px solid mediumorchid;*/
-	box-shadow: 0 0 10px rgba(255,255,255,.5);
+	box-shadow: 0 0 10px rgba(255,255,255,.25);
 }
 textarea {
 	height: 6em;
