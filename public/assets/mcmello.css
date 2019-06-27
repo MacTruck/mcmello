@@ -3,11 +3,16 @@
 	--purple2: #93278F;
 	--purple3: #662D91;
 	--purple4: #6614AC;
-  	--green1: #8CC63F;
-  	--green2: #009245;
-  	--green3: #006837;
-  	--green4: #004C23;
+  	--green1: #8CC63F;		
+  	--green2: #009245;		
+  	--green3: #006837;		
+  	--green4: #004C23;		
   	--orange: #ffb036;
+
+	--orange1: #fc9f0a;
+	--orange2: #FC930A;
+	--orange3: #FB6900;
+  	--orange4: #F63700;
 }
 
 html {
@@ -103,7 +108,7 @@ nav ul li {
 	float: right;
 	margin-right: 30px;
 	color: #ddd;
-	font-size: .9rem;
+	font-size: .95rem;
 	letter-spacing: .1em;
 	text-transform: uppercase;
 }
@@ -119,12 +124,12 @@ nav ul li a:hover {
 }
 .title {
 	color: #eee;
-	font-size: 1.25rem;
+	font-size: 1.4rem;
 	line-height: .5em;
 	letter-spacing: .25em;
 	text-transform: uppercase;
 	text-align: right;
-	margin-top: 3px;
+	margin-bottom: .4em;
 	float: right;
 }
 .currentPage {
@@ -177,8 +182,8 @@ nav ul li a:hover {
 	transition: .5s ease all;
 }
 .itemTitle {
-	font-size: .9rem;
-	letter-spacing: .075em;
+	font-size: .95rem;
+	letter-spacing: .1em;
 	text-transform: uppercase;
 	transition: .5s ease all;
 }
@@ -674,8 +679,8 @@ button:hover {
 	.title {
 		float: none;
 		display: inline-block;
+		font-size: 1.5rem;
 		margin-left: -25px;
-		margin-top: 0;
 		text-align: center;
 	}
 	nav {

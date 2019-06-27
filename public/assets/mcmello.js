@@ -24,10 +24,10 @@
 
 // change icon color on hover
 		icon.addEventListener("mouseover", () => {
-			iconTop.forEach(path => path.style.fill = "var(--green3)");
-			iconMiddle.forEach(path => path.style.fill = "var(--green2)");
-			iconBottom.forEach(path => path.style.fill = "var(--green1)");
-			iconDot.forEach(path => path.style.fill = "var(--green4)");
+			iconTop.forEach(path => path.style.fill = "var(--orange3)");
+			iconMiddle.forEach(path => path.style.fill = "var(--orange2)");
+			iconBottom.forEach(path => path.style.fill = "var(--orange1)");
+			iconDot.forEach(path => path.style.fill = "var(--orange4)");
 		});
 	// change icon color back off hover
 		icon.addEventListener("mouseleave", () => {
