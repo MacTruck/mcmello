@@ -83,14 +83,12 @@ app.post('/inquire', (req, res) => {
 		from: req.body.name + ' &lt;' + req.body.email + '&gt;',
 		to: inquirySendTo,
 		subject: 'New inquiry from mcmello.com',
-		text: output
+		html: output
 	};
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			return console.log(error);
 		}
-		console.log('Message send: %s', info.messageId);
-		console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 	
 		res.render('about');
 	});
