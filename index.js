@@ -63,7 +63,6 @@ app.post('/inquire', (req, res) => {
 		<ul>
 			<li>Name: ${req.body.name}</li>
 			<li>Email: ${req.body.email}</li>
-			<li>Name: ${req.body.name}</li>
 		</ul>
 		<h3>Message</h3>
 		<p>${req.body.message}</p>
