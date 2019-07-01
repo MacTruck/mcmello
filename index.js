@@ -1,31 +1,40 @@
-var express = require('express');
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var fs = require('fs');
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const handlebars = require('express-handlebars');
 const nodemailer = require('nodemailer');
+const fs = require('fs');
 
-var app = express();
-var jsonParser = bodyParser.json();
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+var config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+
+var inquiryEmail = config.inquiryEmail;
+var inquiryPassword = config.inquiryPassword;
+var inquirySendTo = config.inquirySendTo;
 
 // Connect to the database
 
-var url = fs.readFileSync('./connect.txt').toString();
+	var url = config.serverUrl;
 
-mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
-    if (err) { console.log('Oh no... Error:', err); }
-});
+	mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
+	    if (err) { console.log('Oh no... Error:', err); }
+	});
 
-var connection = mongoose.connection;
-var prints;
+	var connection = mongoose.connection;
+	var prints;
 
-connection.on('error', console.error.bind(console, 'connection error:'));
-connection.once('open', function () {
-    connection.db.collection('prints', function(err, collection){
-        collection.find({}).toArray(function(err, data){
-        	prints = data;
-        })
-    });
-});
+	connection.on('error', console.error.bind(console, 'connection error:'));
+	connection.once('open', function () {
+	    connection.db.collection('prints', function(err, collection){
+	        collection.find({}).toArray(function(err, data){
+	        	prints = data;
+	        })
+	    });
+	});
 
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
@@ -46,7 +55,42 @@ app.get('/about', function(req, res) {
 	res.render('about');
 });
 
-app.post('/inquire', jsonParser, function(req, res) {
-	console.log(req.body);
-	res.render('inquire-success', {data: req.body});
+app.post('/inquire', (req, res) => {
+	const output = `
+		<p>You have a new contact request</p>
+		<h3>Contact Details</h3>
+		<ul>
+			<li>Name: ${req.body.name}</li>
+			<li>Email: ${req.body.email}</li>
+			<li>Name: ${req.body.name}</li>
+		</ul>
+		<h3>Message</h3>
+		<p>${req.body.message}</p>
+	`;
+
+	let mailOptions, transporter;
+	transporter = nodemailer.createTransport({
+		host: 'smtp.gmail.com',
+		port: 465,
+		secure: true,
+		auth: {
+			user: inquiryEmail,
+			pass: inquiryPassword
+		}
+	});
+	mailOptions = {
+		from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+		to: inquirySendTo,
+		subject: 'New inquiry from mcmello.com',
+		text: output
+	};
+	transporter.sendMail(mailOptions, (error, info) => {
+		if (error) {
+			return console.log(error);
+		}
+		console.log('Message send: %s', info.messageId);
+		console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+	
+		res.render('contact', {msg: 'Inquiry submitted!'});
+	});
 });
