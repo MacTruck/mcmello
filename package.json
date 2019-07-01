@@ -9,7 +9,8 @@
     "express": "^3.5.2",
     "imagemin": "^6.1.0",
     "imagemin-webp": "^5.0.0",
-    "mongoose": "^5.5.4"
+    "mongoose": "^5.5.4",
+    "nodemailer": "^6.2.1"
   },
   "devDependencies": {},
   "scripts": {

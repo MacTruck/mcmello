@@ -9,7 +9,7 @@
   	--green4: #004C23;		
   	--orange: #ffb036;
 
-	--orange4: #fc9f0a;
+	--orange4: #FC9F0A;
 	--orange3: #FF8800;
 	--orange2: #FB6900;
   	--orange1: #F63700;
@@ -218,7 +218,7 @@ nav ul li a:hover {
 	top: 7px;
 }
 .arrow {
-	fill: rgba(255,255,255,.35); /* #555; */
+	fill: rgba(255,255,255,.75); /* #555; */
 	transition: .5s ease fill;
 }
 #backArrow:hover .arrow {
