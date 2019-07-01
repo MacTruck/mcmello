@@ -1,12 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const handlebars = require('express-handlebars');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 
 const app = express();
 
+// View engine setup
+app.set('view engine', 'ejs');
+app.use(express.static('./public'));
+
+// Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -35,9 +39,6 @@ var inquirySendTo = config.inquirySendTo;
 	        })
 	    });
 	});
-
-app.set('view engine', 'ejs');
-app.use(express.static('./public'));
 
 app.listen(5000, function () {
 	console.log('App listening on port 5000');
@@ -91,6 +92,6 @@ app.post('/inquire', (req, res) => {
 		console.log('Message send: %s', info.messageId);
 		console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 	
-		res.render('contact', {msg: 'Inquiry submitted!'});
+		res.render('about');
 	});
 });
