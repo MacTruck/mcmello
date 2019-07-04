@@ -471,6 +471,15 @@ button:focus {
 	background-image: url("images/baseChalk_packaging.jpg");
 	height: 220px;
 }
+#sportsBasementSlide1 {
+	background-image: url("images/sportsBasement_priceTags_1.jpg");
+}
+#sportsBasementSlide2 {
+	background-image: url("images/sportsBasement_priceTags_2.jpg");
+}
+#sportsBasementSlide3 {
+	background-image: url("images/sportsBasement_priceTags_3.jpg");
+}
 #sportsBasementProject .topImage {
 	background-image: url('images/sportsBasement.jpg'); 
 	background-position-x: 45%; 

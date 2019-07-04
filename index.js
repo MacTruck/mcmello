@@ -58,9 +58,9 @@ app.get('/about', function(req, res) {
 
 app.post('/inquire', (req, res) => {
 	const output = `
-		<p>New message:</p>
-		<h3>${req.body.name}</h3>
-		<h5>${req.body.email}</h5>
+		<p style="font-style: italic;">New inquiry:</p>
+		<h2 style="margin: 0;">${req.body.name}</h2>
+		<h4 style="margin: 0;">${req.body.email}</h4>
 		<p>${req.body.message}</p>
 	`;
 
