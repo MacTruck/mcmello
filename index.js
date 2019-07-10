@@ -10,7 +10,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 
-// Body Parser Middleware
+// Body Parser middleware -- For inquiry email
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -20,25 +20,30 @@ var inquiryEmail = config.inquiryEmail;
 var inquiryPassword = config.inquiryPassword;
 var inquirySendTo = config.inquirySendTo;
 
-// Connect to the database
+// --- database alternative js object
 
-	var url = config.serverUrl;
+var printModule = require('./printList.js');
+var printList = printModule.printList;
 
-	mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
-	    if (err) { console.log('Oh no... Error:', err); }
-	});
+// // Connect to the database -- mongodb antiquated
 
-	var connection = mongoose.connection;
-	var prints;
+// 	var url = config.serverUrl;
 
-	connection.on('error', console.error.bind(console, 'connection error:'));
-	connection.once('open', function () {
-	    connection.db.collection('prints', function(err, collection){
-	        collection.find({}).toArray(function(err, data){
-	        	prints = data;
-	        })
-	    });
-	});
+// 	mongoose.connect(url, { useNewUrlParser: true }, function(err, db) {
+// 	    if (err) { console.log('Oh no... Error:', err); }
+// 	});
+
+// 	var connection = mongoose.connection;
+// 	var prints;
+
+// 	connection.on('error', console.error.bind(console, 'connection error:'));
+// 	connection.once('open', function () {
+// 	    connection.db.collection('prints', function(err, collection){
+// 	        collection.find({}).toArray(function(err, data){
+// 	        	prints = data;
+// 	        })
+// 	    });
+// 	});
 
 app.listen(5000, function () {
 	console.log('App listening on port 5000');
@@ -49,7 +54,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/art', function(req, res) {
-		res.render('art', {prints: prints});
+		res.render('art', {printList: printList});
 });
 
 app.get('/about', function(req, res) {

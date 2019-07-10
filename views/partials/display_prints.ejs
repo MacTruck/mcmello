@@ -2,7 +2,7 @@
 	<h2>Fresh Squeezed</h2>
 	<h4>— Prints &amp; Illustrations —</h4>
 
-	<% prints.forEach(print => { %>
+	<% printList.forEach(print => { %>
 		<div class="printContainer" id="<%= print.id %>" style="margin-top: 50px;">		
 			<div class="print"><img class="shadowed <%= print.shape %> lazy" src="assets/favicons/m-favicon-32x32.png" data-src="<%= print.image %>"></div>
 			<div class="printDesc">
@@ -15,6 +15,3 @@
 		</div>
 	<% }); %>
 </section>
-
-
-<!-- print. id title image shape info desc date -->
